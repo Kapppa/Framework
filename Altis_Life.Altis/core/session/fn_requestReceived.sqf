@@ -37,6 +37,7 @@ BANK = parseNumber (_this select 3);
 CONST(life_adminlevel,(_this select 4));
 if (LIFE_SETTINGS(getNumber,"donor_level") isEqualTo 1) then {
     CONST(life_donorlevel,(_this select 5));
+    player setVariable["donorLevel",(_this select 5),true];
 } else {
     CONST(life_donorlevel,0);
 };
